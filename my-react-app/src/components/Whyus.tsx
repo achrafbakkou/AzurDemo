@@ -1,5 +1,4 @@
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import { Input } from "antd";
 import React, { useState } from "react";
 import Emails from "./Emails";
 
