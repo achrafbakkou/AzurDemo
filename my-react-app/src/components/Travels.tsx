@@ -91,7 +91,7 @@ const Travels: React.FC = () => {
 
 
   {/* Overlay content */}
-  <div className="relative top-30 left-30 max-w-[1100px] ml-auto z-20 flex flex-col md:flex-row items-start gap-35 pt-[100px]" id="c">
+  <div className="relative top-30 left-30 max-w-[1100px] ml-auto z-20 flex flex-col md:flex-row items-start gap-35 pt-[100px]" id="c  ">
     {/* Left: Dynamic text */}
     {/* <div className=" text-gray-800 drop-shadow-lg flex flex-col md:mt-0">
       <h2 className="text-4xl md:text-5xl font-bold mb-4">{selectedTravel.city}</h2>

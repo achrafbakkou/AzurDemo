@@ -1,4 +1,12 @@
 import React from "react";
+// import {
+//   FaFacebookF,
+//   FaInstagram,
+//   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+//   FaTwitter,
+//   FaWhatsapp,
+// } from "react-icons/fa";
+
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
