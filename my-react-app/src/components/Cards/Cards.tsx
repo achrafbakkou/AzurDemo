@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-
+import p1 from "../../assets/paris.webp";
+import p2 from "../../assets/rabat.webp";
+import p3 from "../../assets/tokyo.webp";
+import p4 from "../../assets/newyork.webp";
+import p5 from "../../assets/rome.webp";
+import p6 from "../../assets/istanbul.webp";
+import p7 from "../../assets/dubai.webp";
+import p8 from "../../assets/madrid.webp";
+import p9 from "../../assets/cairo.webp";
 interface CardData {
   title: string;
   description: string;
@@ -7,15 +15,15 @@ interface CardData {
 }
 
 const cards: CardData[] = [
-  { title: "Paris", description: "Ville lumière", image: "/src/assets/paris.png" },
-  { title: "Rabat", description: "Couleurs et traditions", image: "/src/assets/rabat.jpg" },
-  { title: "Tokyo", description: "Futur et culture", image: "/src/assets/tokyo.jpg" },
-  { title: "New York", description: "La ville qui ne dort jamais", image: "/src/assets/newyork.jpg" },
-  { title: "Rome", description: "L’histoire éternelle", image: "/src/assets/rome.jpg" },
-  { title: "Istanbul", description: "Entre Orient et Occident", image: "/src/assets/istanbul.jpg" },
-  { title: "Dubai", description: "Modernité et luxe", image: "/src/assets/dubai.jpg" },
-  { title: "Madrid", description: "Art et passion", image: "/src/assets/madrid.jpg" },
-  { title: "Cairo", description: "Mystère des pyramides", image: "/src/assets/cairo.jpg" },
+  { title: "Paris", description: "Ville lumière", image: p1 },
+  { title: "Rabat", description: "Couleurs et traditions", image: p2 },
+  { title: "Tokyo", description: "Futur et culture", image: p3 },
+  { title: "New York", description: "La ville qui ne dort jamais", image: p4},
+  { title: "Rome", description: "L’histoire éternelle", image:p5  },
+  { title: "Istanbul", description: "Entre Orient et Occident", image: p6 },
+  { title: "Dubai", description: "Modernité et luxe", image: p7 },
+  { title: "Madrid", description: "Art et passion", image:p8 },
+  { title: "Cairo", description: "Mystère des pyramides", image: p9},
 ];
 
 const Cards : React.FC = () => {
@@ -37,6 +45,7 @@ const Cards : React.FC = () => {
             <img
               src={card.image}
               alt={card.title}
+              loading="lazy"
               className="h-48 w-full object-cover"
             />
             <div className="p-4 text-left">
@@ -63,7 +72,7 @@ const Cards : React.FC = () => {
             onClick={() => setShowAll(false)}
             className="px-6 py-3 bg-gray-300 text-gray-800 rounded-full font-semibold hover:bg-gray-400 transition"
           >
-            Réduire
+            Voir moins
           </button>
         )}
       </div>

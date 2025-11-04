@@ -1,12 +1,4 @@
 import React from "react";
-// import {
-//   FaFacebookF,
-//   FaInstagram,
-//   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-//   FaTwitter,
-//   FaWhatsapp,
-// } from "react-icons/fa";
-
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
@@ -16,12 +8,12 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-8">
         {/* 🟦 Company Info */}
         <div className="md:col-span-2">
-          <h2 className="text-2xl font-bold text-white mb-3">Azur Voyage</h2>
+          <h2 className="text-2xl font-bold text-white mb-3">Azur Voyages</h2>
           <p className="text-sm mb-4">
             Voyagez en toute confiance.
           </p>
           <p className="text-xs text-gray-400">
-            © {year} Azur Voyage. All rights reserved.
+            © {year} Azur Voyages. All rights reserved.
           </p>
         </div>
         {/* 🟩 Quick Links */}

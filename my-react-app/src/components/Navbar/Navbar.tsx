@@ -1,58 +1,61 @@
 import React, { useEffect, useState } from "react";
-// import { NavLink } from "react-router-dom";
-
+import "./Navres.css";
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30); // change color after 20px scroll
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${
-        isScrolled
-          ? "bg-white shadow-lg border-gray-200"
-          : "bg-white/10 backdrop-blur-xl border-black/30"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1 className="text-2xl font-bold tracking-wide bg-gradient-to-r from-yellow-400 via-[#F9F5F0] to-sky-500 bg-clip-text text-transparent">
-          Azur Voyage
-        </h1>
-<ul className="flex space-x-8 text-black font-medium">
-  {[
+  const navItems = [
     { name: "Promotion", href: "#promotion" },
     { name: "Services", href: "#services" },
     { name: "Transport", href: "#transport" },
-    { name: "About Us", href: "#about" },
-    { name: "Contact Us", href: "#contact" },
-  ].map((item) => (
-    <li key={item.name}>
-      <a
-        href={item.href}
-        className="relative text-blue-400 transition-all duration-300 hover:text-sky-500 
-                   after:content-[''] after:absolute after:left-0 after:bottom-[-3px] 
-                   after:w-0 after:h-[2px] after:bg-sky-500 after:transition-all after:duration-300
-                   hover:after:w-full"
-      >
-        {item.name}
-      </a>
-    </li>
-  ))}
-</ul>
-        {/* <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
-          <li><NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>Accueil</NavLink></li>
-          <li><NavLink to="/promos" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>Promotions</NavLink></li>
-          <li><NavLink to="/services" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>Services</NavLink></li>
-          <li><NavLink to="/transport" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>Transports</NavLink></li>
-          <li><NavLink to="/about" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>À propos</NavLink></li>
-          <li><NavLink to="/contact" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>Contact</NavLink></li>
+    { name: "A propos", href: "#about" },
+    { name: "Contactez-nous", href: "#contact" },
+  ];
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 w-screen z-50 transition-all duration-100 border-b ${
+        isScrolled
+          ? "bg-white text-blue-400 shadow-lg border-gray-200"
+          : "bg-white/10 text-white backdrop-blur-xl border-black/30"
+      }`}
+    >
+      <div className="max-w-5xl mx-auto flex flex-wrap justify-between items-center px-6 py-4" id="nav-cont">
+        {/* Logo */}
+
+        <h1 className="text-2xl font-bold tracking-wide bg-gradient-to-r from-yellow-400 via-[#F9F5F0] to-sky-500 bg-clip-text text-transparent text-center" id="logo">
+          Azur Voyages
+        </h1>
+            <ul className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10">
+                {navItems.map((i) => (
+                <li key={i.name}>
+                  <a href={i.href}
+                    className="relative  transition-all duration-100 list-none hover:text-black  hover:cursor-pointer font-medium text-sm sm:text-base"
+                >
+                    {i.name}
+                    </a>
+                </li>
+                ))}
+            </ul>
+        {/* Navigation */}
+        {/* <ul className="flex flex-wrap gap-4 md:gap-8 font-medium lg:justify-end flex-1">
+          {navItems.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="relative  transition-all duration-100 hover:text-sky-500 
+                           after:content-[''] after:absolute after:left-0 after:bottom-[-3px] 
+                           after:w-0 after:h-[2px] after:bg-sky-500 after:transition-all after:duration-100
+                           hover:after:w-full"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
         </ul> */}
       </div>
     </nav>

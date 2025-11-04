@@ -42,7 +42,7 @@ const Emails: React.FC = () => {
       </h2>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col sm:flex-row items-center gap-3 bg-white/10 p-4 rounded-lg backdrop-blur-md shadow-lg"
+        className="flex flex-col sm:flex-row items-center gap-3 bg-white/10 w-[90%] p-4 rounded-lg backdrop-blur-md shadow-lg"
       >
         <input
           type="email"
@@ -50,7 +50,7 @@ const Emails: React.FC = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="px-4 py-2 w-80 rounded-md outline-none text-white"
+          className="px-4 py-2 w-80 rounded-md outline-none text-white w-[90%]"
         />
         <button
           type="submit"

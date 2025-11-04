@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
+import v1 from "../../assets/1.webm";
+import v2 from "../../assets/2.webm";
+import v3 from "../../assets/3.webm";
+import v4 from "../../assets/4.webm";
+
 import "./Hero.css";
 // 🎥 List of background videos
 const videos = [
-  "/src/assets/1.mp4",
-  "/src/assets/2.mp4",
-    "/src/assets/3.mp4",
-  "/src/assets/3.mp4",
+  v1,v2,v3,v4
+  // "/assets/2.mp4",
+  //   "/assets/3.mp4",
+  // "/assets/3.mp4",
 ];
 
 // 🏙️ City names for the typing animation
@@ -69,6 +74,7 @@ const Hero: React.FC = () => {
           autoPlay
           loop
           muted
+          preload="metadata"
           className={`absolute top-0 left-0 w-full h-[800px] object-cover transition-opacity duration-3000 ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
@@ -91,7 +97,7 @@ const Hero: React.FC = () => {
         {/* 🌍 Subtitle text */}
         <p className="text-lg md:text-xl opacity-90">
           {/* Discover beauty around the world with <b>Azur Voyage</b> */}
-          Voyagez, expédiez, connectez le monde avec <b>Azur Voyage</b>.
+          Voyagez, expédiez, connectez le monde avec <b>Azur Voyages</b>.
         </p>
 
 {/* <div className="inline-block p-[2px] rounded-lg bg-gradient-to-br from-yellow-400 via-white to-sky-500">
@@ -99,7 +105,8 @@ const Hero: React.FC = () => {
     <a href="http://" className="block">Discover more</a>
   </button>
 </div> */}
-  <button className="group relative flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-blue-500 text-white font-semibold rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all">
+ {/* bg-gradient-to-r from-yellow-400 to-blue-500 */}
+  <button className="mt-10 group relative flex items-center px-6 py-3 text-white bg-white/10 border border-white backdrop-blur font-semibold rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all">
       {/* Arrow */}
       <div className="relative flex items-center justify-center w-6 h-6 mr-2">
         <svg

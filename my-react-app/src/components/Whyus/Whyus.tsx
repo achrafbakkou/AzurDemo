@@ -1,7 +1,7 @@
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
 import Emails from "./Emails";
-
+import train from "../../assets/train.webp";
 const reviews = [
   { name: "Jean Dupont", text: "Service impeccable et très professionnel ! Je recommande vivement Azur Voyages.", rating: 5 },
   { name: "Sophie Martin", text: "Des voyages organisés parfaitement. Merci pour l'accompagnement personnalisé.", rating: 5 },
@@ -28,11 +28,12 @@ const WhyUs: React.FC = () => {
     <section
       className="relative py-24 px-6"
       style={{
-        backgroundImage: "url('/src/assets/train.jpg')",
+        backgroundImage: `url(${train})`,
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>

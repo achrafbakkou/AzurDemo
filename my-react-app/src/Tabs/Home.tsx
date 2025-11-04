@@ -14,6 +14,7 @@ function Home() {
       <WhyUs/>
       <Cards />
       <Footer />
+
     <FloatButton.Group trigger="hover" type="primary" style={{ insetInlineEnd: 24 }} icon={<CommentOutlined />}>
       <FloatButton icon={<RobotOutlined />} />
       <FloatButton icon={<WhatsAppOutlined />} />
