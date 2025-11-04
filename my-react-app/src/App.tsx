@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Home from "./Tabs/Home";
 import { CommentOutlined, RobotOutlined, WhatsAppOutlined } from '@ant-design/icons';
 import { FloatButton } from 'antd';

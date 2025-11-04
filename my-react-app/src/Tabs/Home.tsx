@@ -1,9 +1,8 @@
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-import WhyUs from "../components/Whyus";
-// import Travels from "../components/Travels";
-import Footer from "../components/Footer";
-import Cards from "../components/Cards";
+import Hero from "../components/Hero/Hero";
+import Services from "../components/Body/Services";
+import WhyUs from "../components/Whyus/Whyus";
+import Footer from "../components/Footer/Footer";
+import Cards from "../components/Cards/Cards";
 
 import { CommentOutlined, RobotOutlined, WhatsAppOutlined } from '@ant-design/icons';
 import { FloatButton } from 'antd';
@@ -14,9 +13,7 @@ function Home() {
       <Services />
       <WhyUs/>
       <Cards />
-      {/* <Travels /> */}
       <Footer />
-
     <FloatButton.Group trigger="hover" type="primary" style={{ insetInlineEnd: 24 }} icon={<CommentOutlined />}>
       <FloatButton icon={<RobotOutlined />} />
       <FloatButton icon={<WhatsAppOutlined />} />
